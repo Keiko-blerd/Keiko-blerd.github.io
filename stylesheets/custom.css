@@ -1,0 +1,19 @@
+.navbar {
+    width: 100%;
+}
+
+nav {
+    max-width: 1720px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.brand {
+    grid-column: 1;
+  }
+
+.menu{
+    grid-column: 2;
+  }
