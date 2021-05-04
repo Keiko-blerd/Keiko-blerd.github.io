@@ -1,3 +1,10 @@
+:root {
+    --primary: #0b0c10;
+    --secondary: #1f2833;
+    --third: #66fcf1;
+    --optional: #45a293;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Raleway&display=swap');
 
 body {
@@ -7,75 +14,40 @@ body {
 }
 
 
-.site{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-auto-rows: max-content;
-}
-
-.main-header {
-    background: rgb(1, 48, 56);
-    grid-column: span 4;
-    height: auto;
-}
-
-.main-nav {
-    background: white;
-    grid-column: span 2;
-}
 
 
-.main-area {
-    background: khaki;
-    grid-column: 1 / span 2;
+@media screen and (min-width: 27em) {
+    .site{
+        display: grid;
+        grid-template-areas: 
+            "banner" 
+            "main"
+            "sidebar"
+            "copyright";
+        overflow-x: hidden;
+    }
+
+    .banner {
+        background: var(--secondary);
+        grid-area: banner;
+    }
 }
 
-.sidebar {
-    background: rgb(44, 1, 23);
+@media screen and (min-width: 60em) {
+    .site{
+        display: grid;
+        grid-template-columns: 15em calc(100% - 16em) 15em;
+        grid-template-areas: 
+            "nav banner banner" 
+            "nav main sidebar"
+            "nav copyright copyright";
+    }
+
+    .main-nav {
+        background: var(--primary);
+        grid-area: nav;
+        position: relative;
+        width: 100%;
+    }
 }
 
-.copyright{
-    background: black;
-    grid-column: span 4;
-}
-
-.brand {
-    grid-column: span 2;
-}
-
-.brand h2 {
-    margin: 3px 3px;
-}
-
-.trigger{
-    display: none;
-}
-
-.main-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-  
-.main-nav ul li {
-    border-right:1px solid #bbb;
-    display: inline-block;
-}
-  
-.main-nav ul li:last-child {
-    border-right: none;
-}
-  
-.main-nav ul li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-  
-.main-nav ul li a:hover:not(.active) {
-    background-color: #111;
-}
