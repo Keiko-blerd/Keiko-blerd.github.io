@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+i.fas,
+i.fab {
+    color: #b8b7ad;
+}
+
+.colunm-nav {
+    background: #373a47;
+    font-size: 1.2em;
+}
+
+.column-nav a {
+	color: #b8b7ad;
+}
+
+#profile {
+    background:  #272930;
+    padding: 2em 2em;
+}
+
+#profile h3 {
+    color: #b8b7ad;
+    margin: 1em 0em 0em 0em;
+}
+#menu {
+    height: 44%;
+    padding: 1em 1em;
+}
+
+#avatar {
+    width: 10em;
+    height: 10em;
+    background-image: url(../images/profile.jpeg);
+    background-size: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.menu-items a {
+    display: block;
+	padding: 0.8em;
+    text-decoration: none;
+}
+
+.menu-items a span {
+	margin-left: 10px;
+	font-weight: 700;
+}
+
+.column-nav a:hover,
+.column-nav a:focus {
+	color: #c94e50;
+}
+

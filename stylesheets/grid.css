@@ -1,0 +1,112 @@
+/* ###############################################
+    Basic Responsive CSS fallback for all browsers
+   ############################################### */
+.wrapper {
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+/* ###############################################
+    CSS Grid Layout For Grid Supporting Browsers
+   ############################################### */
+
+@supports (grid-area: auto) {
+
+    /* ###############################################
+                Small Screen Layout
+    ############################################### */
+
+    @media screen and (min-width: 27em){
+
+        .wrapper{
+            max-width: none;
+            display: grid;
+            overflow-x:hidden;
+            width: 100%;
+            height: 100vh;
+            grid-template-columns: 15em calc(100% - 1em);
+            grid-template-areas: 
+                "nav header"
+                "nav main"
+                "nav sidebar"
+                "nav footer";
+        } 
+    }
+
+    @media screen and (min-width: 60em) {
+
+         /* ###############################################
+                Large Screen Layout
+        ############################################### */
+
+        .wrapper{
+          /*  position: relative;
+            left: 0em;  */
+            max-width: none;
+            display: grid;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+            grid-template-columns: 17em auto 17em;
+            grid-template-areas: 
+                "nav header header"
+                "nav main sidebar"
+                "nav main sidebar"
+                "nav footer footer";
+        }
+
+        .column-nav {
+            position: fixed;
+            grid-area: nav;
+            height: 100%;
+            background: #373a47;
+            font-size: 1.2em;
+        }
+
+
+        .close-button {
+            position: absolute;
+            left: 15em;
+            top: 1em;
+            overflow: hidden;
+            text-indent: 1em;
+            font-size: 0.75em;
+            border: none;
+            background: transparent;
+            color: transparent;
+        }
+    
+
+        .column-header {
+            grid-area: header;
+            height: 40em;
+            background-image: url(../images/banner.jpg);
+            background-size: cover;
+        }
+        
+        .column-main {
+            grid-area: main;
+        }
+        
+        .column-sidebar {
+            grid-area: sidebar;
+        }
+        
+        .column-footer {
+            grid-area: footer;
+            background: rgb(0, 0, 0);
+        }
+    }
+
+}
+
+
+[class*='column-'],
+[class*='mobile-'],
+
+
+[class*='column-'] [class*='column-']:last-child {
+	padding-right: 0;
+}
+
+
