@@ -21,7 +21,7 @@
         .wrapper{
             max-width: none;
             display: grid;
-            overflow-x:hidden;
+            overflow:hidden;
             width: 100%;
             height: 100vh;
             grid-template-columns: 15em calc(100% - 1em);
@@ -40,14 +40,12 @@
         ############################################### */
 
         .wrapper{
-          /*  position: relative;
-            left: 0em;  */
             max-width: none;
             display: grid;
             overflow-x: hidden;
             width: 100%;
             height: 100%;
-            grid-template-columns: 17em auto 17em;
+            grid-template-columns: 15em auto 15em;
             grid-template-areas: 
                 "nav header header"
                 "nav main sidebar"
@@ -58,30 +56,19 @@
         .column-nav {
             position: fixed;
             grid-area: nav;
+            background: #0b0c10;
+            width: 15em;
             height: 100%;
-            background: #373a47;
             font-size: 1.2em;
         }
 
 
-        .close-button {
-            position: absolute;
-            left: 15em;
-            top: 1em;
-            overflow: hidden;
-            text-indent: 1em;
-            font-size: 0.75em;
-            border: none;
-            background: transparent;
-            color: transparent;
-        }
-    
-
         .column-header {
             grid-area: header;
             height: 40em;
-            background-image: url(../images/banner.jpg);
             background-size: cover;
+            background-image: linear-gradient(to top right, rgba(102,252,241, 0.50) 8%, rgba(31,40,51, 0.50 ) 50%),
+            url(../images/banner.jpg);
         }
         
         .column-main {
@@ -94,19 +81,11 @@
         
         .column-footer {
             grid-area: footer;
-            background: rgb(0, 0, 0);
         }
     }
 
 }
 
 
-[class*='column-'],
-[class*='mobile-'],
-
-
-[class*='column-'] [class*='column-']:last-child {
-	padding-right: 0;
-}
 
 

@@ -1,55 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap');
 
+i.fa,
 i.fas,
 i.fab {
-    color: #b8b7ad;
+    color: #1f2833;
 }
 
 .colunm-nav {
-    background: #373a47;
+    background: #0b0c10;
     font-size: 1.2em;
 }
 
 .column-nav a {
-	color: #b8b7ad;
+	color: #45a29e;
 }
 
-#profile {
-    background:  #272930;
-    padding: 2em 2em;
+.column-nav a:hover,
+.column-nav a:focus {
+    background: #c5c6c7;
+	color: #1f2833;
 }
 
-#profile h3 {
-    color: #b8b7ad;
-    margin: 1em 0em 0em 0em;
-}
-#menu {
-    height: 44%;
-    padding: 1em 1em;
-}
 
 #avatar {
-    width: 10em;
-    height: 10em;
-    background-image: url(../images/profile.jpeg);
+    width: 11em;
+    height: 11em;
+    background-image: url(../images/user.png);
     background-size: cover;
-    display: block;
+    background-position: bottom;
+    margin: 0.8em 0em 0.8em 1.5em;
     border-radius: 50%;
 }
 
+#title {
+    font-family: 'Tinos', serif;
+    background: #c5c6c7;
+    color: #1f2833;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 2px 4px 4px #000000 inset;
+}
+
+#title h3 {
+    margin: 0.2em 0;
+}
+
+ .menu-items {
+	padding: 1em;
+}
+
 .menu-items a {
-    display: block;
+	display: block;
 	padding: 0.8em;
     text-decoration: none;
 }
 
 .menu-items a span {
-	margin-left: 10px;
+	margin-left: 0.8em;
 	font-weight: 700;
-}
-
-.column-nav a:hover,
-.column-nav a:focus {
-	color: #c94e50;
 }
 
