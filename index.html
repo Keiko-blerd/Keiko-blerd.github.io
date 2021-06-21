@@ -8,24 +8,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheets/grid.css">
         <link rel="stylesheet" href="stylesheets/styles.css">
-        <script src="https://kit.fontawesome.com/0f0d0d6159.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="stylesheets/boxicons.min.css">
+
+        
     </head>
     <body class="wrapper">
-		<section class="column-nav">
-            <div id="avatar"></div>
-            <div id="title"><h3>Nduduzo Hlatshwayo</h3></div>
+		<section class="column-nav d-flex flex-column">
+            <div id="profile">
+                <img src="images/profile.jpeg" alt="" class="fluid-image rounded-image">
+                <h1 class="text-light"><a href="index.html">Nduduzo Hlatshwayo</a></h1>
+                <div class="social-links mt-3 text-center">
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                </div>
+            </div>
             <nav class="menu">
                 <div class="menu-items">
-                    <a href="#"><i class="fa fa-book-reader"></i><span> About Me</span></a>
-                    <a href="#"><i class="fa fa-laptop-code"></i><span>My Skills</span></a>
-                    <a href="#"><i class="fa fa-folder-open"></i><span>Cool Stuff</span></a>
-                    <a href="#"><i class="fa fa-comment"></i><span>Let's Chat</span></a>
+                    <a href="#"><i class="bx bx-user"></i><span>About Me</span></a>
+                    <a href="#"><i class="bx bx-laptop"></i><span>My Skills</span></a>
+                    <a href="#"><i class="bx bx-server"></i><span>Cool Stuff</span></a>
+                    <a href="#"><i class="bx bx-envelope"></i><span>Let's Chat</span></a>
                 </div>
             </nav>
         </section>
-        <header class="column-header">
-            <section class="container">
-                <h1>Some Text Heading About Me</h1>
+        <header id="hero" class="column-header d-flex flex-column">
+            <section class="hero-container">
+                <h1>Hi There! I am Nduduzo,</h1>
+                <p>A self-taught Software Developer
+                   learning and expanding my skill set in Data Engineering. Passionate about machine learning and it's
+                   unlimited capabilities to deliver user-driven
+                   applications.
+                </p>
+                <div class="buttons d-flex">
+                    <button type="submit">Learn More</button>
+                    <button type="submit">Services</button>
+                </div>
             </section>
         </header>
 
